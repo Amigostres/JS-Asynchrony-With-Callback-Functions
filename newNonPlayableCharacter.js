@@ -30,7 +30,11 @@ function newNonPlayableCharacter(x, y) {
         setTimeout(() => {
             stop()
             if (callback) {
+                //this set timeout is here to just simply make the npc pause like a 2d npc
                 setTimeout(() => {
+                    //after running the npc.walkEast(time,callback) function,
+                    //can take a callback so that it can run another function.
+                    //like npc.walkEast(time, walkWest(time, anotherCallback)) and another callback,another,another
                     callback()  
                 }, 500);
             }
